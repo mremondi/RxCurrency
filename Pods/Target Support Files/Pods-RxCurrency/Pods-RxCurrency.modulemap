@@ -1,0 +1,6 @@
+framework module Pods_RxCurrency {
+  umbrella header "Pods-RxCurrency-umbrella.h"
+
+  export *
+  module * { export * }
+}

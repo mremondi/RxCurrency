@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import Alamofire
+import RxSwift
+import RxCocoa
 
 class Repository {
-    func getSymbols(){
-        
+    func getSymbols() -> Observable<[Symbol]>{
+       
     }
 }

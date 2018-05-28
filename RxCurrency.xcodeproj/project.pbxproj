@@ -13,10 +13,18 @@
 		4205FED820BC70E4000D5C4D /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FED720BC70E4000D5C4D /* Navigator.swift */; };
 		4205FEDA20BC70F6000D5C4D /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FED920BC70F6000D5C4D /* AppNavigator.swift */; };
 		4205FEDC20BC7108000D5C4D /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEDB20BC7108000D5C4D /* MainNavigator.swift */; };
-		4205FEDE20BC7120000D5C4D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEDD20BC7120000D5C4D /* HomeView.swift */; };
+		4205FEDE20BC7120000D5C4D /* SymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEDD20BC7120000D5C4D /* SymbolView.swift */; };
 		4205FEE020BC71A5000D5C4D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEDF20BC71A5000D5C4D /* Repository.swift */; };
+		4205FEE220BC73D1000D5C4D /* SymbolTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE120BC73D1000D5C4D /* SymbolTableCell.swift */; };
+		4205FEE420BC7734000D5C4D /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE320BC7734000D5C4D /* Symbol.swift */; };
+		4205FEE620BC8C13000D5C4D /* SymbolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE520BC8C13000D5C4D /* SymbolInteractor.swift */; };
+		4205FEE820BCB8A6000D5C4D /* SymbolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE720BCB8A6000D5C4D /* SymbolViewModel.swift */; };
+		4205FEEB20BCBC06000D5C4D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEEA20BCBC06000D5C4D /* Network.swift */; };
+		4205FEED20BCBC6B000D5C4D /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEEC20BCBC6B000D5C4D /* NetworkProvider.swift */; };
+		4205FEF020BCBCB2000D5C4D /* SymbolsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEEF20BCBCB2000D5C4D /* SymbolsNetwork.swift */; };
+		4205FEF320BCC313000D5C4D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEF220BCC313000D5C4D /* ViewModelType.swift */; };
 		42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */; };
-		42C29B2F20BC6EDF006ADCF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2E20BC6EDF006ADCF8 /* HomeViewController.swift */; };
+		42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */; };
 		42C29B3220BC6EDF006ADCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C29B3020BC6EDF006ADCF8 /* Main.storyboard */; };
 		42C29B3420BC6EDF006ADCF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C29B3320BC6EDF006ADCF8 /* Assets.xcassets */; };
 		42C29B3720BC6EDF006ADCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C29B3520BC6EDF006ADCF8 /* LaunchScreen.storyboard */; };
@@ -52,11 +60,19 @@
 		4205FED720BC70E4000D5C4D /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		4205FED920BC70F6000D5C4D /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		4205FEDB20BC7108000D5C4D /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
-		4205FEDD20BC7120000D5C4D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4205FEDD20BC7120000D5C4D /* SymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolView.swift; sourceTree = "<group>"; };
 		4205FEDF20BC71A5000D5C4D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4205FEE120BC73D1000D5C4D /* SymbolTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTableCell.swift; sourceTree = "<group>"; };
+		4205FEE320BC7734000D5C4D /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		4205FEE520BC8C13000D5C4D /* SymbolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolInteractor.swift; sourceTree = "<group>"; };
+		4205FEE720BCB8A6000D5C4D /* SymbolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolViewModel.swift; sourceTree = "<group>"; };
+		4205FEEA20BCBC06000D5C4D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4205FEEC20BCBC6B000D5C4D /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		4205FEEF20BCBCB2000D5C4D /* SymbolsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsNetwork.swift; sourceTree = "<group>"; };
+		4205FEF220BCC313000D5C4D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		42C29B2920BC6EDF006ADCF8 /* RxCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42C29B2E20BC6EDF006ADCF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolViewController.swift; sourceTree = "<group>"; };
 		42C29B3120BC6EDF006ADCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42C29B3320BC6EDF006ADCF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C29B3620BC6EDF006ADCF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +143,7 @@
 		4205FECC20BC7049000D5C4D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4205FEE320BC7734000D5C4D /* Symbol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +169,7 @@
 		4205FECF20BC7066000D5C4D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4205FEF120BCC307000D5C4D /* Common */,
 				4205FED020BC706A000D5C4D /* Home */,
 			);
 			path = UI;
@@ -160,10 +178,38 @@
 		4205FED020BC706A000D5C4D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				42C29B2E20BC6EDF006ADCF8 /* HomeViewController.swift */,
-				4205FEDD20BC7120000D5C4D /* HomeView.swift */,
+				42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */,
+				4205FEDD20BC7120000D5C4D /* SymbolView.swift */,
+				4205FEE120BC73D1000D5C4D /* SymbolTableCell.swift */,
+				4205FEE520BC8C13000D5C4D /* SymbolInteractor.swift */,
+				4205FEE720BCB8A6000D5C4D /* SymbolViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		4205FEE920BCBBFC000D5C4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4205FEEA20BCBC06000D5C4D /* Network.swift */,
+				4205FEEC20BCBC6B000D5C4D /* NetworkProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4205FEEE20BCBCA7000D5C4D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4205FEEF20BCBCB2000D5C4D /* SymbolsNetwork.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4205FEF120BCC307000D5C4D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4205FEF220BCC313000D5C4D /* ViewModelType.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		42C29B2020BC6EDF006ADCF8 = {
@@ -191,6 +237,8 @@
 		42C29B2B20BC6EDF006ADCF8 /* RxCurrency */ = {
 			isa = PBXGroup;
 			children = (
+				4205FEEE20BCBCA7000D5C4D /* API */,
+				4205FEE920BCBBFC000D5C4D /* Network */,
 				4205FECF20BC7066000D5C4D /* UI */,
 				4205FECE20BC705B000D5C4D /* Storage */,
 				4205FECD20BC7050000D5C4D /* Navigation */,
@@ -454,12 +502,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxCurrency/Pods-RxCurrency-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -538,15 +590,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42C29B2F20BC6EDF006ADCF8 /* HomeViewController.swift in Sources */,
+				42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */,
 				4205FED620BC70C4000D5C4D /* ViewControllerFactory.swift in Sources */,
 				4205FEDA20BC70F6000D5C4D /* AppNavigator.swift in Sources */,
+				4205FEE220BC73D1000D5C4D /* SymbolTableCell.swift in Sources */,
 				4205FED220BC7083000D5C4D /* UIViewExtensions.swift in Sources */,
+				4205FEED20BCBC6B000D5C4D /* NetworkProvider.swift in Sources */,
+				4205FEEB20BCBC06000D5C4D /* Network.swift in Sources */,
+				4205FEE420BC7734000D5C4D /* Symbol.swift in Sources */,
+				4205FEF320BCC313000D5C4D /* ViewModelType.swift in Sources */,
 				4205FED420BC70B6000D5C4D /* DependencyContainer.swift in Sources */,
+				4205FEE620BC8C13000D5C4D /* SymbolInteractor.swift in Sources */,
+				4205FEE820BCB8A6000D5C4D /* SymbolViewModel.swift in Sources */,
 				42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */,
 				4205FEDC20BC7108000D5C4D /* MainNavigator.swift in Sources */,
 				4205FEE020BC71A5000D5C4D /* Repository.swift in Sources */,
-				4205FEDE20BC7120000D5C4D /* HomeView.swift in Sources */,
+				4205FEDE20BC7120000D5C4D /* SymbolView.swift in Sources */,
+				4205FEF020BCBCB2000D5C4D /* SymbolsNetwork.swift in Sources */,
 				4205FED820BC70E4000D5C4D /* Navigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

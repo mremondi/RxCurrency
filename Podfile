@@ -8,6 +8,8 @@ target 'RxCurrency' do
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxAlamofire'
+  pod 'ObjectMapper'
 
   target 'RxCurrencyTests' do
     inherit! :search_paths

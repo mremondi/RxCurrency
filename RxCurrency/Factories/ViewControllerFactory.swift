@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ViewControllerFactory{
-    func makeHomeViewController(navigator: Navigator) -> HomeViewController
+    func makeHomeViewController(navigator: Navigator) -> SymbolViewController
 }

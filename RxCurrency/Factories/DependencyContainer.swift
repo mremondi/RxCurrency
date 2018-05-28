@@ -13,7 +13,7 @@ class DependencyContainer {
 }
 
 extension DependencyContainer: ViewControllerFactory{
-    func makeHomeViewController(navigator: Navigator) -> HomeViewController {
-        return HomeViewController(homeView: HomeView())
+    func makeHomeViewController(navigator: Navigator) -> SymbolViewController {
+        return SymbolViewController(symbolView: SymbolView(), interactor: SymbolInteractor())
     }
 }

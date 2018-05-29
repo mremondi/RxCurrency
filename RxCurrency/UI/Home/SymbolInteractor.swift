@@ -10,20 +10,8 @@ import Foundation
 import RxSwift
 
 class SymbolInteractor{
-    func getSymbols(){
+    func getSymbols() -> Observable<[Symbol]>{
         let repo = Repository()
-        repo.getSymbols().observeOn(MainScheduler.instance)
-            .subscribe { event in
-                switch event {
-                case .next(let value):
-                    print("onNext")
-                    print(value)
-                    //self.homeView.configureView(symbols: value)
-                case .error(let error):
-                    print("onError")
-                case .completed:
-                    print("completed")
-                }
-        }
+        return repo.getSymbols()
     }
 }

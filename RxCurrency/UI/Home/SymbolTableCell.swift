@@ -38,7 +38,7 @@ class SymbolTableCell: UITableViewCell{
         
     }
     
-    func bind(_ viewModel: SymbolViewModel){
-        self.symbolLabel.text = viewModel.symbolName
+    func configure(symbolName: String) {
+        symbolLabel.text = symbolName
     }
 }

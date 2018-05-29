@@ -1,5 +1,5 @@
 //
-//  ViewModelType.swift
+//  SymbolUseCase.swift
 //  RxCurrency
 //
 //  Created by Michael Remondi on 5/28/18.
@@ -7,10 +7,8 @@
 //
 
 import Foundation
+import RxSwift
 
-protocol ViewModelType {
-    associatedtype Input
-    associatedtype Output
-    
-    func transform(input: Input) -> Output
+public protocol SymbolUseCase {
+    func symbols() -> Observable<[Symbol]>
 }

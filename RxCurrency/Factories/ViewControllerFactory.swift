@@ -10,4 +10,5 @@ import Foundation
 
 protocol ViewControllerFactory{
     func makeHomeViewController(navigator: Navigator) -> SymbolViewController
+    func makeQuoteViewController(symbol: Symbol, navigator: Navigator) -> QuoteViewController
 }

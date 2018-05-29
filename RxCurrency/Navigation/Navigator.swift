@@ -16,3 +16,7 @@ protocol Navigator{
 protocol HomeNavigator: Navigator{
     func toHomeViewController()
 }
+
+protocol QuoteNavigator: Navigator{
+    func toQuoteViewController(symbol: Symbol)
+}

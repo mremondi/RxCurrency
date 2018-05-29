@@ -11,9 +11,13 @@ import UIKit
 
 fileprivate let symbolTableReuseIdentifier = "SymbolTableCell"
 
+protocol SymbolViewDelegate{
+    func symbolChosen(symbol: Symbol)
+}
 
 class SymbolView: UIView{
     var symbols: [Symbol] = []
+    var delegate: SymbolViewDelegate?
     
     var symbolTableView: UITableView!
     
@@ -45,8 +49,9 @@ class SymbolView: UIView{
         symbolTableView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
     }
     
-    func configureView(symbols: [Symbol]){
+    func configureView(symbols: [Symbol], delegate: SymbolViewDelegate){
         self.symbols = symbols
+        self.delegate = delegate
         self.symbolTableView.reloadData()
     }
 }
@@ -58,12 +63,14 @@ extension SymbolView: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: symbolTableReuseIdentifier) as! SymbolTableCell
-        cell.bind()
+        cell.configure(symbolName: self.symbols[indexPath.row].symbolName)
         cell.isUserInteractionEnabled = true
         return cell
     }
 }
 
 extension SymbolView: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.symbolChosen(symbol: self.symbols[indexPath.row])
+    }
 }

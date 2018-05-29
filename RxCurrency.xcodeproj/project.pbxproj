@@ -18,11 +18,12 @@
 		4205FEE220BC73D1000D5C4D /* SymbolTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE120BC73D1000D5C4D /* SymbolTableCell.swift */; };
 		4205FEE420BC7734000D5C4D /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE320BC7734000D5C4D /* Symbol.swift */; };
 		4205FEE620BC8C13000D5C4D /* SymbolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE520BC8C13000D5C4D /* SymbolInteractor.swift */; };
-		4205FEE820BCB8A6000D5C4D /* SymbolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEE720BCB8A6000D5C4D /* SymbolViewModel.swift */; };
-		4205FEEB20BCBC06000D5C4D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEEA20BCBC06000D5C4D /* Network.swift */; };
-		4205FEED20BCBC6B000D5C4D /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEEC20BCBC6B000D5C4D /* NetworkProvider.swift */; };
-		4205FEF020BCBCB2000D5C4D /* SymbolsNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEEF20BCBCB2000D5C4D /* SymbolsNetwork.swift */; };
-		4205FEF320BCC313000D5C4D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FEF220BCC313000D5C4D /* ViewModelType.swift */; };
+		4205FF0C20BD9DA8000D5C4D /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF0B20BD9DA8000D5C4D /* QuoteViewController.swift */; };
+		4205FF0E20BD9DB3000D5C4D /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF0D20BD9DB3000D5C4D /* QuoteView.swift */; };
+		4205FF1020BD9DC7000D5C4D /* QuoteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF0F20BD9DC7000D5C4D /* QuoteInteractor.swift */; };
+		4205FF1220BD9DD9000D5C4D /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF1120BD9DD9000D5C4D /* Quote.swift */; };
+		4205FF1520BDA89F000D5C4D /* QuoteHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF1320BDA89F000D5C4D /* QuoteHistory.xcdatamodeld */; };
+		4205FF5420BDC05D000D5C4D /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5320BDC05D000D5C4D /* StyleKit.swift */; };
 		42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */; };
 		42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */; };
 		42C29B3220BC6EDF006ADCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C29B3020BC6EDF006ADCF8 /* Main.storyboard */; };
@@ -65,11 +66,12 @@
 		4205FEE120BC73D1000D5C4D /* SymbolTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTableCell.swift; sourceTree = "<group>"; };
 		4205FEE320BC7734000D5C4D /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		4205FEE520BC8C13000D5C4D /* SymbolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolInteractor.swift; sourceTree = "<group>"; };
-		4205FEE720BCB8A6000D5C4D /* SymbolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolViewModel.swift; sourceTree = "<group>"; };
-		4205FEEA20BCBC06000D5C4D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		4205FEEC20BCBC6B000D5C4D /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		4205FEEF20BCBCB2000D5C4D /* SymbolsNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsNetwork.swift; sourceTree = "<group>"; };
-		4205FEF220BCC313000D5C4D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		4205FF0B20BD9DA8000D5C4D /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		4205FF0D20BD9DB3000D5C4D /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		4205FF0F20BD9DC7000D5C4D /* QuoteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteInteractor.swift; sourceTree = "<group>"; };
+		4205FF1120BD9DD9000D5C4D /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		4205FF1420BDA89F000D5C4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4205FF5320BDC05D000D5C4D /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		42C29B2920BC6EDF006ADCF8 /* RxCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				4205FEE320BC7734000D5C4D /* Symbol.swift */,
+				4205FF1120BD9DD9000D5C4D /* Quote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,7 +172,7 @@
 		4205FECF20BC7066000D5C4D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4205FEF120BCC307000D5C4D /* Common */,
+				4205FF0A20BD9D81000D5C4D /* Quote */,
 				4205FED020BC706A000D5C4D /* Home */,
 			);
 			path = UI;
@@ -182,34 +185,18 @@
 				4205FEDD20BC7120000D5C4D /* SymbolView.swift */,
 				4205FEE120BC73D1000D5C4D /* SymbolTableCell.swift */,
 				4205FEE520BC8C13000D5C4D /* SymbolInteractor.swift */,
-				4205FEE720BCB8A6000D5C4D /* SymbolViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4205FEE920BCBBFC000D5C4D /* Network */ = {
+		4205FF0A20BD9D81000D5C4D /* Quote */ = {
 			isa = PBXGroup;
 			children = (
-				4205FEEA20BCBC06000D5C4D /* Network.swift */,
-				4205FEEC20BCBC6B000D5C4D /* NetworkProvider.swift */,
+				4205FF0B20BD9DA8000D5C4D /* QuoteViewController.swift */,
+				4205FF0D20BD9DB3000D5C4D /* QuoteView.swift */,
+				4205FF0F20BD9DC7000D5C4D /* QuoteInteractor.swift */,
 			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		4205FEEE20BCBCA7000D5C4D /* API */ = {
-			isa = PBXGroup;
-			children = (
-				4205FEEF20BCBCB2000D5C4D /* SymbolsNetwork.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		4205FEF120BCC307000D5C4D /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				4205FEF220BCC313000D5C4D /* ViewModelType.swift */,
-			);
-			path = Common;
+			path = Quote;
 			sourceTree = "<group>";
 		};
 		42C29B2020BC6EDF006ADCF8 = {
@@ -237,8 +224,7 @@
 		42C29B2B20BC6EDF006ADCF8 /* RxCurrency */ = {
 			isa = PBXGroup;
 			children = (
-				4205FEEE20BCBCA7000D5C4D /* API */,
-				4205FEE920BCBBFC000D5C4D /* Network */,
+				4205FF1320BDA89F000D5C4D /* QuoteHistory.xcdatamodeld */,
 				4205FECF20BC7066000D5C4D /* UI */,
 				4205FECE20BC705B000D5C4D /* Storage */,
 				4205FECD20BC7050000D5C4D /* Navigation */,
@@ -250,6 +236,7 @@
 				42C29B3520BC6EDF006ADCF8 /* LaunchScreen.storyboard */,
 				42C29B3820BC6EDF006ADCF8 /* Info.plist */,
 				4205FED120BC7083000D5C4D /* UIViewExtensions.swift */,
+				4205FF5320BDC05D000D5C4D /* StyleKit.swift */,
 			);
 			path = RxCurrency;
 			sourceTree = "<group>";
@@ -502,16 +489,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxCurrency/Pods-RxCurrency-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -591,23 +574,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */,
+				4205FF0C20BD9DA8000D5C4D /* QuoteViewController.swift in Sources */,
 				4205FED620BC70C4000D5C4D /* ViewControllerFactory.swift in Sources */,
 				4205FEDA20BC70F6000D5C4D /* AppNavigator.swift in Sources */,
 				4205FEE220BC73D1000D5C4D /* SymbolTableCell.swift in Sources */,
+				4205FF1520BDA89F000D5C4D /* QuoteHistory.xcdatamodeld in Sources */,
 				4205FED220BC7083000D5C4D /* UIViewExtensions.swift in Sources */,
-				4205FEED20BCBC6B000D5C4D /* NetworkProvider.swift in Sources */,
-				4205FEEB20BCBC06000D5C4D /* Network.swift in Sources */,
 				4205FEE420BC7734000D5C4D /* Symbol.swift in Sources */,
-				4205FEF320BCC313000D5C4D /* ViewModelType.swift in Sources */,
+				4205FF0E20BD9DB3000D5C4D /* QuoteView.swift in Sources */,
 				4205FED420BC70B6000D5C4D /* DependencyContainer.swift in Sources */,
 				4205FEE620BC8C13000D5C4D /* SymbolInteractor.swift in Sources */,
-				4205FEE820BCB8A6000D5C4D /* SymbolViewModel.swift in Sources */,
+				4205FF1220BD9DD9000D5C4D /* Quote.swift in Sources */,
 				42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */,
 				4205FEDC20BC7108000D5C4D /* MainNavigator.swift in Sources */,
 				4205FEE020BC71A5000D5C4D /* Repository.swift in Sources */,
 				4205FEDE20BC7120000D5C4D /* SymbolView.swift in Sources */,
-				4205FEF020BCBCB2000D5C4D /* SymbolsNetwork.swift in Sources */,
 				4205FED820BC70E4000D5C4D /* Navigator.swift in Sources */,
+				4205FF1020BD9DC7000D5C4D /* QuoteInteractor.swift in Sources */,
+				4205FF5420BDC05D000D5C4D /* StyleKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +924,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4205FF1320BDA89F000D5C4D /* QuoteHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4205FF1420BDA89F000D5C4D /* Model.xcdatamodel */,
+			);
+			currentVersion = 4205FF1420BDA89F000D5C4D /* Model.xcdatamodel */;
+			path = QuoteHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42C29B2120BC6EDF006ADCF8 /* Project object */;
 }

@@ -33,3 +33,10 @@ extension MainNavigator: HomeNavigator{
         navigationController?.pushViewController(homeVC, animated: true)
     }
 }
+
+extension MainNavigator: QuoteNavigator{
+    func toQuoteViewController(symbol: Symbol) {
+        let quoteVC = factory.makeQuoteViewController(symbol: symbol, navigator: self)
+        navigationController?.pushViewController(quoteVC, animated: true)
+    }
+}

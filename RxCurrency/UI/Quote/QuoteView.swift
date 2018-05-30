@@ -161,6 +161,4 @@ extension QuoteView: UITableViewDataSource{
     }
 }
 
-extension QuoteView: UITableViewDelegate{
-    
-}
+extension QuoteView: UITableViewDelegate{}

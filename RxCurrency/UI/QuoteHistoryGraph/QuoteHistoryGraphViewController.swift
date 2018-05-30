@@ -17,12 +17,12 @@ class QuoteHistoryGraphViewController: UIViewController {
     let quoteHistoryGraphView: QuoteHistoryGraphView!
     let interactor: QuoteHistoryGraphInteractor!
     
-    init(quoteHistory: [Quote], navigator: Navigator,
-         quoteHistoryGraphView: QuoteHistoryGraphView, interactor: QuoteHistoryGraphInteractor) {
+    init(quoteHistory: [Quote], navigator: Navigator, interactor: QuoteHistoryGraphInteractor) {
         self.quoteHistory = quoteHistory
         self.navigator = navigator
-        self.quoteHistoryGraphView = quoteHistoryGraphView
         self.interactor = interactor
+         self.quoteHistoryGraphView = QuoteHistoryGraphView(quotePoints:
+            interactor.normalizeQuoteData(quoteHistory: quoteHistory), trendLine: interactor.calculateLinearRegressionPoints(quoteHistory: quoteHistory))
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,6 +35,19 @@ class QuoteHistoryGraphViewController: UIViewController {
         
         self.view.addSubview(quoteHistoryGraphView)
         self.quoteHistoryGraphView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        self.quoteHistoryGraphView.configureView(quoteHistory: quoteHistory)
+        
+        self.interactor.isMarketOpen().observeOn(MainScheduler.instance)
+            .subscribe { event in
+                switch event {
+                case .next(let value):
+                    self.quoteHistoryGraphView.configureBackground(isOpen: value)
+                case .error(let error):
+                    print("onError: " + error.localizedDescription)
+                case .completed:
+                    print("completed")
+                }
+        }
         
     }
 }

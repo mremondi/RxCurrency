@@ -39,8 +39,6 @@ class SymbolViewController: UIViewController {
             .subscribe { event in
                 switch event {
                 case .next(let value):
-                    print("onNext")
-                    print(value)
                     self.symbolView.configureView(symbols: value, delegate: self)
                 case .error(let error):
                     print("onError: " + error.localizedDescription)

@@ -22,6 +22,6 @@ extension DependencyContainer: ViewControllerFactory{
     }
     
     func makeQuoteHistoryGraphViewController(quoteHistory: [Quote], navigator: Navigator) -> QuoteHistoryGraphViewController {
-        return QuoteHistoryGraphViewController(quoteHistory: quoteHistory, navigator: navigator, quoteHistoryGraphView: QuoteHistoryGraphView(), interactor: QuoteHistoryGraphInteractor())
+        return QuoteHistoryGraphViewController(quoteHistory: quoteHistory, navigator: navigator, interactor: QuoteHistoryGraphInteractor())
     }
 }

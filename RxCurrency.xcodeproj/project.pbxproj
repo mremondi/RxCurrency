@@ -28,6 +28,7 @@
 		4205FF5E20BF28ED000D5C4D /* QuoteHistoryGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5D20BF28ED000D5C4D /* QuoteHistoryGraphView.swift */; };
 		4205FF6020BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5F20BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift */; };
 		4205FF6220BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF6120BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift */; };
+		4205FF6420BF2EAD000D5C4D /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF6320BF2EAD000D5C4D /* GraphView.swift */; };
 		42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */; };
 		42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */; };
 		42C29B3220BC6EDF006ADCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C29B3020BC6EDF006ADCF8 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 		4205FF5D20BF28ED000D5C4D /* QuoteHistoryGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryGraphView.swift; sourceTree = "<group>"; };
 		4205FF5F20BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryGraphViewController.swift; sourceTree = "<group>"; };
 		4205FF6120BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryGraphInteractor.swift; sourceTree = "<group>"; };
+		4205FF6320BF2EAD000D5C4D /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		42C29B2920BC6EDF006ADCF8 /* RxCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				4205FF5D20BF28ED000D5C4D /* QuoteHistoryGraphView.swift */,
 				4205FF5F20BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift */,
 				4205FF6120BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift */,
+				4205FF6320BF2EAD000D5C4D /* GraphView.swift */,
 			);
 			path = QuoteHistoryGraph;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				4205FF1020BD9DC7000D5C4D /* QuoteInteractor.swift in Sources */,
 				4205FF5420BDC05D000D5C4D /* StyleKit.swift in Sources */,
 				4205FF5E20BF28ED000D5C4D /* QuoteHistoryGraphView.swift in Sources */,
+				4205FF6420BF2EAD000D5C4D /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

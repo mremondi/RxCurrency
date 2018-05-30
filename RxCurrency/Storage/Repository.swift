@@ -12,6 +12,20 @@ import RxSwift
 import CoreData
 
 class Repository {
+    
+    func isMarketOpen() -> Observable<Bool> {
+        return Observable<Bool>.create { observer in
+            Alamofire.request("https://forex.1forge.com/1.0.3/market_status?api_key=ZTFRq7X6ZI0S3R0Co0KsIkgPCRWhUPvb").responseJSON(completionHandler: {response in
+                if let response = response.result.value{
+                    let dict = response as! NSDictionary
+                    let isOpen = dict["market_is_open"] as! Bool
+                    observer.onNext(isOpen)
+                }
+            })
+            return Disposables.create()
+        }
+    }
+    
     func getSymbols() -> Observable<[Symbol]>{
         return Observable<[Symbol]>.create { observer in
             Alamofire.request("https://forex.1forge.com/1.0.3/symbols?api_key=ZTFRq7X6ZI0S3R0Co0KsIkgPCRWhUPvb")

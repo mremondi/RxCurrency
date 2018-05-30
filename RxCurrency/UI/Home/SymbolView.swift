@@ -38,6 +38,7 @@ class SymbolView: UIView{
         symbolTableView.dataSource = self
         symbolTableView.delegate = self
         symbolTableView.register(SymbolTableCell.self, forCellReuseIdentifier: symbolTableReuseIdentifier)
+        symbolTableView.rowHeight = 44.0
 
         
         [symbolTableView].forEach{

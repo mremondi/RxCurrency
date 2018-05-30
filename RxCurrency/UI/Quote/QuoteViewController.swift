@@ -35,36 +35,19 @@ class QuoteViewController: UIViewController {
         self.view.addSubview(quoteView)
         self.quoteView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         
+        let quoteObservable = interactor.getQuote(symbol: symbol)
+        let quoteHistoryObservable = interactor.getQuoteHistory(symbol: symbol)
         
-        interactor.getQuote(symbol: symbol).observeOn(MainScheduler.instance)
-            .subscribe { event in
-                switch event {
-                case .next(let value):
-                    print("onNext")
-                    print(value)
-                    self.quoteView.configureView(quote: value)
-                case .error(let error):
-                    print("onError: " + error.localizedDescription)
-                case .completed:
-                    print("completed")
-                }
-        }
+        let combined = Observable.combineLatest(quoteObservable, quoteHistoryObservable)
         
-        interactor.getQuoteHistory(symbol: symbol).observeOn(MainScheduler.instance)
-            .subscribe { event in
-                switch event {
-                case .next(let value):
-                    print("**********************************")
-                    print("onNext quote history")
-                    print(value)
-                    print(value.count)
-                    print("**********************************")
-                    
-                case .error(let error):
-                    print("onError: " + error.localizedDescription)
-                case .completed:
-                    print("completed")
-                }
-        }
+        combined.subscribe { event in
+            if let element = event.element{
+                self.quoteView.configureView(quote: element.0)
+                self.quoteView.configureHistory(quoteHistory: element.1)
+                self.quoteView.configureTrend(trend: self.interactor.calculateLinearRegressionSlope(quoteHistory: element.1))
+            }
+            
+        }.disposed(by: disposeBag)
+    
     }
 }

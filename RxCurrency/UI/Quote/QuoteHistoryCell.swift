@@ -41,11 +41,11 @@ class QuoteHistoryCell: UITableViewCell{
         quoteBidLabel.font = UIFont(name: StyleKit.Font.regular, size: 12)
         
         quotePriceLabel.anchorCenterY(to: contentView)
-        quotePriceLabel.anchor(top: nil, leading: quoteBidLabel.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 90, bottom: 0, right: 0))
+        quotePriceLabel.anchor(top: nil, leading: quoteBidLabel.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 60, bottom: 0, right: 0))
         quotePriceLabel.font = UIFont(name: StyleKit.Font.bold, size: 12)
         
         quoteAskLabel.anchorCenterY(to: contentView)
-        quoteAskLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: quoteTimeLabel.leadingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 90))
+        quoteAskLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: quoteTimeLabel.leadingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 60))
         quoteAskLabel.font = UIFont(name: StyleKit.Font.regular, size: 12)
         
         quoteTimeLabel.anchorCenterY(to: contentView)
@@ -54,9 +54,9 @@ class QuoteHistoryCell: UITableViewCell{
     }
     
     func configure(quote: Quote) {
-        quoteBidLabel.text = String(format: "%.2f", quote.bid)
-        quotePriceLabel.text = String(format: "%.2f", quote.price)
-        quoteAskLabel.text = String(format: "%.2f", quote.ask)
+        quoteBidLabel.text = String(format: "%.6f", quote.bid)
+        quotePriceLabel.text = String(format: "%.6f", quote.price)
+        quoteAskLabel.text = String(format: "%.6f", quote.ask)
         quoteTimeLabel.text = String(quote.timeStamp)
     }
 }

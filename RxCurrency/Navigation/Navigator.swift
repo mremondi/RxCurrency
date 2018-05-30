@@ -20,3 +20,7 @@ protocol HomeNavigator: Navigator{
 protocol QuoteNavigator: Navigator{
     func toQuoteViewController(symbol: Symbol)
 }
+
+protocol QuoteHistoryGraphNavigator: Navigator{
+    func toQuoteHistoryGraphViewController(quoteHistory: [Quote])
+}

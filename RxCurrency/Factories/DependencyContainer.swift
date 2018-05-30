@@ -9,7 +9,7 @@
 import Foundation
 
 class DependencyContainer {
-    //private lazy var userManager = UserManager()
+
 }
 
 extension DependencyContainer: ViewControllerFactory{
@@ -18,6 +18,10 @@ extension DependencyContainer: ViewControllerFactory{
     }
     
     func makeQuoteViewController(symbol: Symbol, navigator: Navigator) -> QuoteViewController{
-        return QuoteViewController(symbol: symbol, navigator: navigator, quoteView: QuoteView(), interactor: QuoteInteractor())
+        return QuoteViewController(symbol: symbol, navigator: navigator as! QuoteViewController.QuoteViewNavigation, quoteView: QuoteView(), interactor: QuoteInteractor())
+    }
+    
+    func makeQuoteHistoryGraphViewController(quoteHistory: [Quote], navigator: Navigator) -> QuoteHistoryGraphViewController {
+        return QuoteHistoryGraphViewController(quoteHistory: quoteHistory, navigator: navigator, quoteHistoryGraphView: QuoteHistoryGraphView(), interactor: QuoteHistoryGraphInteractor())
     }
 }

@@ -11,7 +11,14 @@ import UIKit
 
 fileprivate let quoteHistoryCellReuseIdentifier = "QuoteHistoryCell"
 
+protocol QuoteViewDelegate {
+    func symbolNameTap()
+}
+
 class QuoteView: UIView{
+    
+    var delegate: QuoteViewDelegate?
+    
     var quote: Quote?
     var quoteHistory: [Quote] = []
     
@@ -68,6 +75,8 @@ class QuoteView: UIView{
         symbolNameLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
         symbolNameLabel.font = UIFont(name: StyleKit.Font.bold, size: 32)
         symbolNameLabel.textColor = .black
+        symbolNameLabel.isUserInteractionEnabled = true
+        symbolNameLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(QuoteView.symbolNameTap)))
         
         dividerOne.anchor(top: symbolNameLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 1))
         dividerOne.backgroundColor = .lightGray
@@ -115,9 +124,9 @@ class QuoteView: UIView{
     func configureView(quote: Quote){
         self.quote = quote
         symbolNameLabel.text = "Quote: " + quote.symbolName
-        quotePriceLabel.text = "$" + String(format: "%.2f", quote.price)
-        quoteAskLabel.text = "$" + String(format: "%.2f", quote.ask)
-        quoteBidLabel.text = "$" + String(format: "%.2f", quote.bid)
+        quotePriceLabel.text = "$" + String(format: "%.6f", quote.price)
+        quoteAskLabel.text = "$" + String(format: "%.6f", quote.ask)
+        quoteBidLabel.text = "$" + String(format: "%.6f", quote.bid)
     }
     
     func configureHistory(quoteHistory: [Quote]){
@@ -133,6 +142,10 @@ class QuoteView: UIView{
                 self.symbolNameLabel.text = symbolName + "📉"
             }
         }
+    }
+    
+    @objc func symbolNameTap(){
+        delegate?.symbolNameTap()
     }
 }
 

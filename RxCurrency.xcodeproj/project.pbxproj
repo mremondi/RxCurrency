@@ -25,6 +25,9 @@
 		4205FF1520BDA89F000D5C4D /* QuoteHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF1320BDA89F000D5C4D /* QuoteHistory.xcdatamodeld */; };
 		4205FF5420BDC05D000D5C4D /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5320BDC05D000D5C4D /* StyleKit.swift */; };
 		4205FF5A20BEFA47000D5C4D /* QuoteHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5920BEFA47000D5C4D /* QuoteHistoryCell.swift */; };
+		4205FF5E20BF28ED000D5C4D /* QuoteHistoryGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5D20BF28ED000D5C4D /* QuoteHistoryGraphView.swift */; };
+		4205FF6020BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF5F20BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift */; };
+		4205FF6220BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4205FF6120BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift */; };
 		42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */; };
 		42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */; };
 		42C29B3220BC6EDF006ADCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C29B3020BC6EDF006ADCF8 /* Main.storyboard */; };
@@ -74,6 +77,9 @@
 		4205FF1420BDA89F000D5C4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4205FF5320BDC05D000D5C4D /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
 		4205FF5920BEFA47000D5C4D /* QuoteHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryCell.swift; sourceTree = "<group>"; };
+		4205FF5D20BF28ED000D5C4D /* QuoteHistoryGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryGraphView.swift; sourceTree = "<group>"; };
+		4205FF5F20BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryGraphViewController.swift; sourceTree = "<group>"; };
+		4205FF6120BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHistoryGraphInteractor.swift; sourceTree = "<group>"; };
 		42C29B2920BC6EDF006ADCF8 /* RxCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C29B2C20BC6EDF006ADCF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C29B2E20BC6EDF006ADCF8 /* SymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 		4205FECF20BC7066000D5C4D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4205FF5C20BF28DA000D5C4D /* QuoteHistoryGraph */,
 				4205FF0A20BD9D81000D5C4D /* Quote */,
 				4205FED020BC706A000D5C4D /* Home */,
 			);
@@ -200,6 +207,16 @@
 				4205FF5920BEFA47000D5C4D /* QuoteHistoryCell.swift */,
 			);
 			path = Quote;
+			sourceTree = "<group>";
+		};
+		4205FF5C20BF28DA000D5C4D /* QuoteHistoryGraph */ = {
+			isa = PBXGroup;
+			children = (
+				4205FF5D20BF28ED000D5C4D /* QuoteHistoryGraphView.swift */,
+				4205FF5F20BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift */,
+				4205FF6120BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift */,
+			);
+			path = QuoteHistoryGraph;
 			sourceTree = "<group>";
 		};
 		42C29B2020BC6EDF006ADCF8 = {
@@ -576,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4205FF6220BF29E4000D5C4D /* QuoteHistoryGraphInteractor.swift in Sources */,
 				42C29B2F20BC6EDF006ADCF8 /* SymbolViewController.swift in Sources */,
 				4205FF0C20BD9DA8000D5C4D /* QuoteViewController.swift in Sources */,
 				4205FED620BC70C4000D5C4D /* ViewControllerFactory.swift in Sources */,
@@ -591,11 +609,13 @@
 				4205FF1220BD9DD9000D5C4D /* Quote.swift in Sources */,
 				42C29B2D20BC6EDF006ADCF8 /* AppDelegate.swift in Sources */,
 				4205FEDC20BC7108000D5C4D /* MainNavigator.swift in Sources */,
+				4205FF6020BF28FB000D5C4D /* QuoteHistoryGraphViewController.swift in Sources */,
 				4205FEE020BC71A5000D5C4D /* Repository.swift in Sources */,
 				4205FEDE20BC7120000D5C4D /* SymbolView.swift in Sources */,
 				4205FED820BC70E4000D5C4D /* Navigator.swift in Sources */,
 				4205FF1020BD9DC7000D5C4D /* QuoteInteractor.swift in Sources */,
 				4205FF5420BDC05D000D5C4D /* StyleKit.swift in Sources */,
+				4205FF5E20BF28ED000D5C4D /* QuoteHistoryGraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

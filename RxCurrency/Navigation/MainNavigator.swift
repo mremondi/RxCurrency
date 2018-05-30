@@ -40,3 +40,10 @@ extension MainNavigator: QuoteNavigator{
         navigationController?.pushViewController(quoteVC, animated: true)
     }
 }
+
+extension MainNavigator: QuoteHistoryGraphNavigator{
+    func toQuoteHistoryGraphViewController(quoteHistory: [Quote]) {
+        let quoteHistoryGraphVC = factory.makeQuoteHistoryGraphViewController(quoteHistory: quoteHistory, navigator: self)
+        navigationController?.pushViewController(quoteHistoryGraphVC, animated: true)
+    }
+}

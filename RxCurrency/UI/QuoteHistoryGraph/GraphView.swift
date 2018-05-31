@@ -20,7 +20,7 @@ class GraphView: UIView{
         self.points = points
         self.trendLine = trendLine
         super.init(frame: .zero)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor.clear
     }
     
     override func draw(_ rect: CGRect) {
@@ -60,7 +60,11 @@ class GraphView: UIView{
                 x: point.x * maxX,
                 y: maxY - point.y * maxY))
         }
-        UIColor.black.setStroke()
+        if trendingUp(){
+            StyleKit.Colors.marketUpLine.setStroke()
+        } else{
+            StyleKit.Colors.marketDownLine.setStroke()
+        }
         path.stroke()
     }
     
@@ -77,5 +81,9 @@ class GraphView: UIView{
         path.addLine(to: CGPoint(x: trendLine[1].x * maxX, y: maxY - trendLine[1].y * maxY))
         UIColor.red.setStroke()
         path.stroke()
+    }
+    
+    private func trendingUp() -> Bool{
+        return trendLine[0].y < trendLine[1].y ? true: false
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class QuoteHistoryGraphView: UIView{
+    var symbolNameLabel: UILabel!
     var graphView: GraphView!
     var xAxisLabel1: UILabel!
     var xAxisLabel2: UILabel!
@@ -29,17 +30,22 @@ class QuoteHistoryGraphView: UIView{
     }
     
     func initViews(){
+        symbolNameLabel = UILabel()
         xAxisLabel1 = UILabel()
         xAxisLabel2 = UILabel()
         yAxisLabel1 = UILabel()
         yAxisLabel2 = UILabel()
-        [graphView, xAxisLabel1, xAxisLabel2, yAxisLabel1, yAxisLabel2].forEach{
+        [symbolNameLabel, graphView, xAxisLabel1, xAxisLabel2, yAxisLabel1, yAxisLabel2].forEach{
             addSubview($0)
         }
     }
     
     func initConstraints(){
-        graphView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 32, left: 32, bottom: 0, right: 32), size: .init(width: 0, height: 300))
+        symbolNameLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
+        symbolNameLabel.font = UIFont(name: StyleKit.Font.bold, size: 32)
+        symbolNameLabel.textColor = .black
+        
+        graphView.anchor(top: symbolNameLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 32, left: 32, bottom: 0, right: 32), size: .init(width: 0, height: 300))
         
         xAxisLabel1.anchor(top: graphView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
         xAxisLabel1.font = UIFont(name: StyleKit.Font.thin, size: 12)
@@ -60,14 +66,15 @@ class QuoteHistoryGraphView: UIView{
     
     func configureBackground(isOpen: Bool){
         if isOpen{
-            self.backgroundColor = .white
+            self.backgroundColor = StyleKit.Colors.marketOpenBackground
         }
         else {
-            self.backgroundColor = .black
+            self.backgroundColor = StyleKit.Colors.marketClosedBackground
         }
     }
     
     func configureView(quoteHistory: [Quote]){
+        symbolNameLabel.text = quoteHistory[0].symbolName
         xAxisLabel1.text = String(findMinX(quoteHistory: quoteHistory))
         xAxisLabel2.text = String(findMaxX(quoteHistory: quoteHistory))
         yAxisLabel1.text = String(findMinY(quoteHistory: quoteHistory))
